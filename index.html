@@ -3,235 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍">
-    <meta name="keywords" content="Greg, Greg👍, Greg the alligator, Greg the lizard, chubby albino alligator, sits like a little man">
     <title>GREG 👍</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: Impact, 'Arial Black', Arial, sans-serif;
-            background: #111;
-            color: #fff;
+            background: #fff;
+            color: #000;
             overflow-x: hidden;
         }
 
-        /* FLOATING THUMBS UP ANIMATION */
+        /* FLOATING THUMBS */
         .thumbs-container {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             pointer-events: none;
             z-index: 9999;
             overflow: hidden;
         }
-
         .floating-thumb {
             position: absolute;
             font-size: 3rem;
             animation: fall linear infinite;
-            opacity: 0.7;
+            opacity: 0.5;
         }
-
         @keyframes fall {
-            0% {
-                transform: translateY(-100px) rotate(0deg);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
+            0%   { transform: translateY(-100px) rotate(0deg); opacity: 0.6; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
         }
 
-        /* SECTIONS - ALL 100VH */
+        /* ALL SECTIONS 100VH */
         section {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
             position: relative;
             text-align: center;
         }
 
+        /* NO BORDER RADIUS ANYWHERE */
+        img, button, .card, .badge { border-radius: 0 !important; }
+
         /* GREG GLOW */
         @keyframes gregGlow {
-            0% {
-                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4),
-                            0 0 80px rgba(255, 215, 0, 0.3);
-            }
-            50% {
-                box-shadow: 0 0 80px rgba(255, 215, 0, 0.8),
-                            0 0 160px rgba(255, 215, 0, 0.5);
-            }
-            100% {
-                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4),
-                            0 0 80px rgba(255, 215, 0, 0.3);
-            }
+            0%   { box-shadow: 0 0 30px rgba(255,215,0,0.3), 0 0 60px rgba(255,215,0,0.2); }
+            50%  { box-shadow: 0 0 80px rgba(255,215,0,1), 0 0 160px rgba(255,215,0,0.6); }
+            100% { box-shadow: 0 0 30px rgba(255,215,0,0.3), 0 0 60px rgba(255,215,0,0.2); }
+        }
+        .glow { animation: gregGlow 3s infinite; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50%       { transform: scale(1.04); }
         }
 
-        .greg-main {
-            width: 500px;
-            max-width: 80vw;
-            height: auto;
-            border-radius: 20px;
-            animation: gregGlow 3s infinite;
-        }
+        /* ==============================
+           SECTION 1: THE GREG
+        ============================== */
+        #s1 { background: #fff; }
 
-        /* SECTION 1: THE GREG */
-        #section1 {
-            background: #111;
-        }
-
-        #section1 h1 {
-            font-size: clamp(4rem, 15vw, 12rem);
+        #s1 h1 {
+            font-size: clamp(5rem, 18vw, 14rem);
             color: #FFD700;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-        }
-
-        #section1 .greg-spam {
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            color: #FFD700;
-            margin: 2rem 0;
-            line-height: 1.5;
-        }
-
-        .counter-badge {
-            display: inline-block;
-            background: #FFD700;
-            color: #111;
-            padding: 1.5rem 3rem;
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            font-weight: 900;
-            border-radius: 15px;
-            margin-top: 2rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            text-shadow: 4px 4px 0 #000, -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000;
+            margin-bottom: 1.5rem;
         }
 
-        /* SECTION 2: WHO IS GREG */
-        #section2 {
-            background: #1a1a1a;
+        #s1 .greg-main {
+            width: 520px;
+            max-width: 85vw;
+            border: 6px solid #FFD700;
+        }
+
+        #s1 .greg-spam {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: #000;
+            margin: 2rem 0;
+            line-height: 1.6;
+            max-width: 900px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #FFD700;
+            color: #000;
+            padding: 1.2rem 2.5rem;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 900;
+            border: 4px solid #000;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 1.5rem;
+        }
+
+        /* ==============================
+           SECTION 2: WHO IS GREG
+        ============================== */
+        #s2 {
+            background: #FFD700;
             flex-direction: row;
-            gap: 4rem;
+            gap: 3rem;
             flex-wrap: wrap;
         }
 
-        #section2 .left-side {
+        #s2 .left {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            gap: 1.5rem;
         }
 
-        #section2 .left-side img {
-            width: 400px;
+        #s2 .left img {
+            width: 380px;
             max-width: 90vw;
-            height: auto;
-            border-radius: 20px;
+            border: 6px solid #000;
             transform: rotate(-3deg);
-            animation: gregGlow 3s infinite;
         }
 
-        #section2 .right-side {
+        #s2 .left img.small {
+            width: 200px;
+            transform: rotate(3deg);
+            border: 4px solid #000;
+        }
+
+        #s2 .right {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
             text-align: left;
         }
 
-        #section2 .right-side p {
+        #s2 .right p {
             font-size: clamp(2rem, 4vw, 3.5rem);
-            line-height: 1.4;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .fan-wall {
-            display: grid;
-            grid-template-columns: repeat(6, 80px);
-            gap: 10px;
-            margin-top: 2rem;
-            justify-content: center;
-        }
-
-        .fan-wall img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid #FFD700;
-        }
-
-        /* SECTION 3: THE SACRED TEXTS */
-        #section3 {
-            background: #FFD700;
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
             color: #000;
         }
 
-        #section3 h2 {
-            font-size: clamp(4rem, 10vw, 10rem);
-            margin-bottom: 3rem;
-            text-transform: uppercase;
+        /* Fan wall — MORE GREGS */
+        .fan-wall {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 8px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 3rem;
+        }
+        .fan-wall img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border: 3px solid #000;
         }
 
-        #section3 .teachings {
+        /* ==============================
+           SECTION 3: SACRED TEXTS
+        ============================== */
+        #s3 {
+            background: #fff;
+            border-top: 8px solid #000;
+            border-bottom: 8px solid #000;
+        }
+
+        #s3 h2 {
+            font-size: clamp(4rem, 12vw, 11rem);
+            text-transform: uppercase;
+            color: #000;
+            text-shadow: 4px 4px 0 #FFD700;
+            margin-bottom: 3rem;
+        }
+
+        #s3 .teachings {
             font-size: clamp(2rem, 5vw, 4rem);
-            line-height: 1.8;
-            max-width: 900px;
+            line-height: 1.9;
+            max-width: 1000px;
             text-align: left;
             position: relative;
             z-index: 2;
         }
 
-        #section3 .teachings div {
+        #s3 .teachings div {
+            border-left: 8px solid #FFD700;
+            padding-left: 1.5rem;
             margin-bottom: 1.5rem;
         }
 
-        #section3 .bg-greg {
-            position: absolute;
-            width: 600px;
-            height: auto;
-            opacity: 0.15;
-            z-index: 1;
+        #s3 .greg-row {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #s3 .greg-row img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 4px solid #FFD700;
         }
 
-        /* SECTION 4: TESTIMONIALS */
-        #section4 {
-            background: #111;
-            flex-direction: column;
+        /* ==============================
+           SECTION 4: TESTIMONIALS
+        ============================== */
+        #s4 {
+            background: #FFD700;
+            border-top: 8px solid #000;
         }
 
-        #section4 h2 {
-            font-size: clamp(3rem, 8vw, 7rem);
-            color: #FFD700;
+        #s4 h2 {
+            font-size: clamp(2.5rem, 7vw, 7rem);
+            color: #000;
             margin-bottom: 3rem;
             text-transform: uppercase;
         }
 
-        .testimonial-grid {
+        .test-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             max-width: 1400px;
             width: 100%;
         }
 
-        .testimonial-card {
-            background: #1a1a1a;
-            border: 3px solid #FFD700;
-            border-radius: 15px;
+        .card {
+            background: #fff;
+            border: 5px solid #000;
             padding: 2rem;
             display: flex;
             flex-direction: column;
@@ -239,297 +243,335 @@
             gap: 1rem;
         }
 
-        .testimonial-card img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid #FFD700;
+        .card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 3px solid #000;
         }
 
-        .testimonial-card .quote {
-            font-size: clamp(1.3rem, 2.5vw, 2rem);
-            color: #FFD700;
+        .card .quote {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            color: #000;
             line-height: 1.4;
         }
 
-        .testimonial-card .author {
+        .card .author {
             font-size: 1rem;
-            color: #999;
+            color: #555;
             font-family: Arial, sans-serif;
         }
 
-        /* SECTION 5: JOIN GREG */
-        #section5 {
-            background: #111;
-            flex-direction: column;
+        /* ==============================
+           SECTION 5: GREG GRID
+        ============================== */
+        #s5 {
+            background: #fff;
+            border-top: 8px solid #FFD700;
         }
 
-        #section5 .greg-pulsing {
-            width: 450px;
-            max-width: 80vw;
-            height: auto;
-            border-radius: 20px;
-            animation: gregGlow 3s infinite, pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        #section5 .big-text {
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            color: #FFD700;
-            margin: 2rem 0;
+        #s5 h2 {
+            font-size: clamp(3rem, 9vw, 9rem);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
         }
 
-        #section5 .join-button {
+        .greg-mega-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            width: 100%;
+            margin: 2rem 0;
+        }
+        .greg-mega-grid img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border: 4px solid #FFD700;
+        }
+        .greg-mega-grid img:nth-child(odd)  { transform: rotate(-2deg); }
+        .greg-mega-grid img:nth-child(even) { transform: rotate(2deg); }
+
+        .spam-block {
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: 1.7;
+            max-width: 1000px;
+            color: #000;
+            margin: 2rem 0;
+        }
+
+        /* ==============================
+           SECTION 6: JOIN GREG
+        ============================== */
+        #s6 {
             background: #FFD700;
-            color: #111;
+            border-top: 8px solid #000;
+        }
+
+        #s6 .greg-pulsing {
+            width: 400px;
+            max-width: 80vw;
+            border: 6px solid #000;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        #s6 .big-text {
+            font-size: clamp(2.5rem, 6vw, 5.5rem);
+            color: #000;
+            margin: 1.5rem 0;
+            text-transform: uppercase;
+        }
+
+        .join-button {
+            background: #000;
+            color: #FFD700;
             border: none;
             font-size: clamp(3rem, 7vw, 6rem);
             font-weight: 900;
             padding: 1.5rem 4rem;
-            border-radius: 25px;
             cursor: pointer;
             margin: 2rem 0;
             text-transform: uppercase;
-            transition: transform 0.2s;
             font-family: Impact, 'Arial Black', Arial, sans-serif;
+            border: 6px solid #000;
+            transition: transform 0.15s;
         }
-
-        #section5 .join-button:hover {
-            transform: scale(1.1);
-        }
-
-        #section5 .join-button:active {
-            transform: scale(0.95);
-        }
+        .join-button:hover  { transform: scale(1.08); background: #222; }
+        .join-button:active { transform: scale(0.95); }
 
         .session-counter {
-            font-size: clamp(1.2rem, 2.5vw, 2rem);
-            color: #FFD700;
-            margin-top: 1rem;
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            color: #000;
             font-family: Arial, sans-serif;
         }
 
-        .acknowledgment-text {
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            color: #FFD700;
+        .ack {
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            color: #000;
             margin-top: 1rem;
-            min-height: 3rem;
+            min-height: 4rem;
             opacity: 0;
             transition: opacity 0.3s;
         }
-
-        .acknowledgment-text.visible {
-            opacity: 1;
-        }
+        .ack.show { opacity: 1; }
 
         /* MARQUEE */
-        .marquee-container {
+        .marquee-wrap {
             width: 100%;
             overflow: hidden;
             background: #000;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             margin-top: 3rem;
-            border-top: 5px solid #FFD700;
-            border-bottom: 5px solid #FFD700;
+            border-top: 6px solid #FFD700;
+            border-bottom: 6px solid #FFD700;
         }
-
         .marquee {
             display: flex;
-            animation: marqueeScroll 20s linear infinite;
+            animation: marqueeScroll 15s linear infinite;
             width: fit-content;
         }
-
         .marquee span {
             font-size: clamp(2rem, 4vw, 3.5rem);
             color: #FFD700;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             white-space: nowrap;
         }
-
         @keyframes marqueeScroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
-        /* FOOTER */
+        /* ==============================
+           FOOTER
+        ============================== */
         footer {
             background: #000;
             padding: 3rem 2rem;
             text-align: center;
-            border-top: 5px solid #FFD700;
+            border-top: 8px solid #FFD700;
         }
-
         footer p {
-            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            font-size: clamp(1.2rem, 2vw, 2rem);
             margin: 1rem 0;
             color: #FFD700;
         }
-
-        footer .emoji-row {
-            font-size: 3rem;
-            margin: 1.5rem 0;
-        }
-
+        .emoji-row { font-size: 2.5rem; margin: 1.5rem 0; letter-spacing: 0.2rem; }
         footer .tiny {
-            font-size: 0.9rem;
-            color: #999;
+            font-size: 0.85rem;
+            color: #777;
             font-family: Arial, sans-serif;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
-            #section2 {
-                flex-direction: column;
-            }
-
-            #section2 .right-side {
-                text-align: center;
-            }
-
-            .fan-wall {
-                grid-template-columns: repeat(3, 80px);
-            }
-
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
+            #s2 { flex-direction: column; }
+            #s2 .right { text-align: center; }
+            .fan-wall { grid-template-columns: repeat(4, 1fr); }
+            .greg-mega-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 
-<!-- FLOATING THUMBS UP -->
 <div class="thumbs-container" id="thumbsContainer"></div>
 
-<!-- SECTION 1: THE GREG -->
-<section id="section1">
+<!-- SECTION 1 -->
+<section id="s1">
     <h1>GREG 👍</h1>
-    <img src="greg.jpg" alt="Greg" class="greg-main">
+    <img src="greg.jpg" alt="Greg" class="greg-main glow">
     <div class="greg-spam">
+        Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍<br>
+        Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍<br>
         Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍
     </div>
-    <div class="counter-badge">2,200 GREGS STRONG</div>
+    <div class="badge">2,200 GREGS STRONG 👍</div>
 </section>
 
-<!-- SECTION 2: WHO IS GREG -->
-<section id="section2">
-    <div class="left-side">
-        <img src="greg.jpg" alt="Greg">
+<!-- SECTION 2 -->
+<section id="s2">
+    <div class="left">
+        <img src="greg.jpg" alt="Greg" class="glow">
+        <img src="greg.jpg" alt="Greg" class="small glow">
     </div>
-    <div class="right-side">
+    <div class="right">
         <p>Greg is a guy.</p>
-        <p>Greg sits.</p>
         <p>Greg👍</p>
+        <p>Greg sits.</p>
+        <p>Greg👍 Greg👍</p>
         <p>Nobody knows where Greg came from.</p>
         <p>Greg does not answer questions.</p>
-        <p>Greg simply is.</p>
         <p>Greg👍 Greg👍 Greg👍</p>
-        <div class="fan-wall">
-            <img src="greg.jpg" alt="Greg">
-            <img src="greg.jpg" alt="Greg">
-            <img src="greg.jpg" alt="Greg">
-            <img src="greg.jpg" alt="Greg">
-            <img src="greg.jpg" alt="Greg">
-            <img src="greg.jpg" alt="Greg">
-        </div>
+        <p>Greg simply is.</p>
+        <p>Greg👍 Greg👍 Greg👍 Greg👍</p>
+        <p>Greg has no enemies.</p>
+        <p>Greg👍 Greg👍 Greg👍 Greg👍 Greg👍</p>
+    </div>
+    <div class="fan-wall">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
     </div>
 </section>
 
-<!-- SECTION 3: THE SACRED TEXTS -->
-<section id="section3">
-    <img src="greg.jpg" alt="Greg" class="bg-greg">
+<!-- SECTION 3 -->
+<section id="s3">
     <h2>THE TEACHINGS</h2>
     <div class="teachings">
         <div>1. Greg👍</div>
         <div>2. Greg👍 Greg👍</div>
         <div>3. If unsure: Greg👍</div>
         <div>4. Greg does not need you. But: Greg👍</div>
-        <div>5. 👍 Greg 👍 Greg 👍 Greg 👍</div>
+        <div>5. 👍 Greg 👍 Greg 👍 Greg 👍 Greg 👍</div>
+        <div>6. Every morning: Greg👍</div>
+        <div>7. Every night: Greg👍 Greg👍</div>
+    </div>
+    <div class="greg-row">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
     </div>
 </section>
 
-<!-- SECTION 4: TESTIMONIALS -->
-<section id="section4">
-    <h2>WHAT PEOPLE ARE SAYING ABOUT GREG</h2>
-    <div class="testimonial-grid">
-        <div class="testimonial-card">
-            <img src="greg.jpg" alt="Greg Believer">
+<!-- SECTION 4 -->
+<section id="s4">
+    <h2>WHAT PEOPLE SAY ABOUT GREG</h2>
+    <div class="test-grid">
+        <div class="card">
+            <img src="greg.jpg" alt="Greg">
             <div class="quote">Greg👍</div>
             <div class="author">— Greg Believer #1</div>
         </div>
-        <div class="testimonial-card">
-            <img src="greg.jpg" alt="Greg Believer">
+        <div class="card">
+            <img src="greg.jpg" alt="Greg">
             <div class="quote">Greg👍 Greg👍</div>
             <div class="author">— Greg Believer #847</div>
         </div>
-        <div class="testimonial-card">
-            <img src="greg.jpg" alt="Greg Believer">
+        <div class="card">
+            <img src="greg.jpg" alt="Greg">
             <div class="quote">I had nothing. Then: Greg👍</div>
             <div class="author">— Greg Believer #1,203</div>
         </div>
-        <div class="testimonial-card">
-            <img src="greg.jpg" alt="Greg Believer">
+        <div class="card">
+            <img src="greg.jpg" alt="Greg">
             <div class="quote">Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍</div>
             <div class="author">— Greg Believer #2,199 (most devoted)</div>
         </div>
-        <div class="testimonial-card">
-            <img src="greg.jpg" alt="Greg Believer">
+        <div class="card">
+            <img src="greg.jpg" alt="Greg">
             <div class="quote">Greg.</div>
             <div class="author">— Greg Believer #412 (a man of few words. A man of Greg.)</div>
+        </div>
+        <div class="card">
+            <img src="greg.jpg" alt="Greg">
+            <div class="quote">Greg👍 Greg👍 Greg👍</div>
+            <div class="author">— Greg Believer #99</div>
         </div>
     </div>
 </section>
 
-<!-- SECTION 5: JOIN GREG -->
-<section id="section5">
+<!-- SECTION 5: GREG GRID -->
+<section id="s5">
+    <h2>GREG 👍 GREG 👍 GREG</h2>
+    <div class="spam-block">
+        Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍<br>
+        Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍
+    </div>
+    <div class="greg-mega-grid">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+        <img src="greg.jpg" alt="Greg">
+    </div>
+    <div class="spam-block">
+        Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍<br>
+        Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍
+    </div>
+</section>
+
+<!-- SECTION 6: JOIN -->
+<section id="s6">
     <img src="greg.jpg" alt="Greg" class="greg-pulsing">
     <div class="big-text">2,200 HAVE ALREADY SAID Greg👍</div>
     <div class="big-text">IT IS YOUR TURN.</div>
     <button class="join-button" id="gregButton">Greg👍</button>
     <div class="session-counter">You have said Greg👍 <span id="clickCount">0</span> times this session</div>
-    <div class="acknowledgment-text" id="acknowledgment"></div>
+    <div class="ack" id="acknowledgment"></div>
 
-    <div class="marquee-container">
+    <div class="marquee-wrap">
         <div class="marquee">
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
-            <span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
+            <span>Greg👍</span><span>Greg👍</span><span>Greg👍</span><span>Greg👍</span>
         </div>
     </div>
 </section>
@@ -539,61 +581,45 @@
     <p>© Greg. All rights by Greg. For Greg.</p>
     <div class="emoji-row">Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍</div>
     <p>greg.frog</p>
-    <p class="tiny">Greg has not personally endorsed this website. Greg does not endorse. Greg simply sits.</p>
+    <p class="tiny">Greg has not personally endorsed this website. Greg does not endorse. Greg simply sits. Greg👍</p>
 </footer>
 
 <script>
-// FLOATING THUMBS UP RAIN
+// FLOATING THUMBS RAIN
 const thumbsContainer = document.getElementById('thumbsContainer');
-function createFloatingThumb() {
-    const thumb = document.createElement('div');
-    thumb.className = 'floating-thumb';
-    thumb.textContent = '👍';
-    thumb.style.left = Math.random() * 100 + 'vw';
-    thumb.style.animationDuration = (Math.random() * 3 + 4) + 's';
-    thumb.style.animationDelay = Math.random() * 2 + 's';
-    thumbsContainer.appendChild(thumb);
-
-    setTimeout(() => {
-        thumb.remove();
-    }, 8000);
+function createThumb() {
+    const t = document.createElement('div');
+    t.className = 'floating-thumb';
+    t.textContent = '👍';
+    t.style.left = Math.random() * 100 + 'vw';
+    t.style.fontSize = (Math.random() * 3 + 2) + 'rem';
+    t.style.animationDuration = (Math.random() * 4 + 5) + 's';
+    t.style.animationDelay = (Math.random() * 2) + 's';
+    thumbsContainer.appendChild(t);
+    setTimeout(() => t.remove(), 10000);
 }
-
-// Create thumbs continuously
-setInterval(createFloatingThumb, 400);
-
-// Initial batch
-for (let i = 0; i < 10; i++) {
-    setTimeout(createFloatingThumb, i * 200);
-}
+setInterval(createThumb, 300);
+for (let i = 0; i < 15; i++) setTimeout(createThumb, i * 150);
 
 // GREG BUTTON
-let clickCount = 0;
-const gregButton = document.getElementById('gregButton');
-const clickCountEl = document.getElementById('clickCount');
-const acknowledgmentEl = document.getElementById('acknowledgment');
-
-const messages = [
-    "Greg has acknowledged you.",
-    "Greg nods.",
+let count = 0;
+const msgs = [
+    "Greg has acknowledged you. Greg👍",
+    "Greg nods. Greg👍",
     "Greg👍",
-    "Greg sees you.",
-    "Greg."
+    "Greg sees you. Greg👍",
+    "Greg.",
+    "Greg is pleased. Greg👍",
+    "Greg👍 Greg👍 Greg👍",
 ];
-
-gregButton.addEventListener('click', () => {
-    clickCount++;
-    clickCountEl.textContent = clickCount;
-
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    acknowledgmentEl.textContent = randomMessage;
-    acknowledgmentEl.classList.add('visible');
-
-    setTimeout(() => {
-        acknowledgmentEl.classList.remove('visible');
-    }, 2000);
+document.getElementById('gregButton').addEventListener('click', () => {
+    count++;
+    document.getElementById('clickCount').textContent = count;
+    const ack = document.getElementById('acknowledgment');
+    ack.textContent = msgs[Math.floor(Math.random() * msgs.length)];
+    ack.classList.add('show');
+    setTimeout(() => ack.classList.remove('show'), 2500);
 });
 </script>
-
 </body>
 </html>

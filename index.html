@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Greg is a frog. Greg does not explain himself. Greg simply is.">
-    <meta name="keywords" content="Greg, frog, Greg👍, deity, 2200 members">
-    <title>greg</title>
+    <meta name="description" content="Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍">
+    <meta name="keywords" content="Greg, Greg👍, Greg the alligator, Greg the lizard, chubby albino alligator, sits like a little man">
+    <title>GREG 👍</title>
     <style>
         * {
             margin: 0;
@@ -14,267 +14,349 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: Impact, 'Arial Black', Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            overflow-x: hidden;
         }
 
-        .hero {
+        /* FLOATING THUMBS UP ANIMATION */
+        .thumbs-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .floating-thumb {
+            position: absolute;
+            font-size: 3rem;
+            animation: fall linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* SECTIONS - ALL 100VH */
+        section {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 60px 20px;
-            background: #0a0a0a;
+            padding: 2rem;
             position: relative;
-        }
-
-        .greg-image {
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 50px;
-            box-shadow:
-                0 0 60px rgba(218, 165, 32, 0.6),
-                0 0 120px rgba(218, 165, 32, 0.4),
-                0 0 180px rgba(218, 165, 32, 0.2);
-            filter: brightness(1.1);
-        }
-
-        .hero h1 {
-            font-size: 120px;
-            font-weight: 300;
-            letter-spacing: 40px;
-            margin-bottom: 30px;
-            color: #ffffff;
-            text-transform: lowercase;
-            padding-left: 40px;
-        }
-
-        .hero .subtitle {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #daa520;
-            letter-spacing: 4px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(218, 165, 32, 0.2);
-            border: 2px solid #daa520;
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            color: #daa520;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .hero .small-text {
-            font-size: 14px;
-            opacity: 0.7;
-            font-style: italic;
-            max-width: 500px;
-            line-height: 1.8;
-        }
-
-        .section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 40px;
-        }
-
-        .section h2 {
-            font-size: 56px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            margin-bottom: 60px;
             text-align: center;
-            color: #daa520;
         }
 
-        .who-is-greg {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+        /* GREG GLOW */
+        @keyframes gregGlow {
+            0% {
+                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4),
+                            0 0 80px rgba(255, 215, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 80px rgba(255, 215, 0, 0.8),
+                            0 0 160px rgba(255, 215, 0, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4),
+                            0 0 80px rgba(255, 215, 0, 0.3);
+            }
         }
 
-        .who-is-greg .text-content p {
-            font-size: 20px;
-            line-height: 1.9;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .who-is-greg .greg-image-small {
-            width: 100%;
-            max-width: 450px;
+        .greg-main {
+            width: 500px;
+            max-width: 80vw;
+            height: auto;
             border-radius: 20px;
-            box-shadow:
-                0 0 40px rgba(218, 165, 32, 0.4),
-                0 0 80px rgba(218, 165, 32, 0.2);
-            margin: 0 auto;
-            display: block;
+            animation: gregGlow 3s infinite;
         }
 
-        .teachings {
-            background: #111111;
-            padding: 100px 40px;
+        /* SECTION 1: THE GREG */
+        #section1 {
+            background: #111;
         }
 
-        .teachings-list {
-            max-width: 900px;
-            margin: 0 auto;
+        #section1 h1 {
+            font-size: clamp(4rem, 15vw, 12rem);
+            color: #FFD700;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
         }
 
-        .teaching-item {
-            background: rgba(218, 165, 32, 0.05);
-            border-left: 6px solid #daa520;
-            padding: 35px 45px;
-            margin-bottom: 30px;
-            font-size: 22px;
+        #section1 .greg-spam {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: #FFD700;
+            margin: 2rem 0;
+            line-height: 1.5;
+        }
+
+        .counter-badge {
+            display: inline-block;
+            background: #FFD700;
+            color: #111;
+            padding: 1.5rem 3rem;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 900;
+            border-radius: 15px;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* SECTION 2: WHO IS GREG */
+        #section2 {
+            background: #1a1a1a;
+            flex-direction: row;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        #section2 .left-side {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #section2 .left-side img {
+            width: 400px;
+            max-width: 90vw;
+            height: auto;
+            border-radius: 20px;
+            transform: rotate(-3deg);
+            animation: gregGlow 3s infinite;
+        }
+
+        #section2 .right-side {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        #section2 .right-side p {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .fan-wall {
+            display: grid;
+            grid-template-columns: repeat(6, 80px);
+            gap: 10px;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .fan-wall img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #FFD700;
+        }
+
+        /* SECTION 3: THE SACRED TEXTS */
+        #section3 {
+            background: #FFD700;
+            color: #000;
+        }
+
+        #section3 h2 {
+            font-size: clamp(4rem, 10vw, 10rem);
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        #section3 .teachings {
+            font-size: clamp(2rem, 5vw, 4rem);
             line-height: 1.8;
-            transition: all 0.3s ease;
+            max-width: 900px;
+            text-align: left;
+            position: relative;
+            z-index: 2;
         }
 
-        .teaching-item:hover {
-            background: rgba(218, 165, 32, 0.1);
-            transform: translateX(10px);
+        #section3 .teachings div {
+            margin-bottom: 1.5rem;
         }
 
-        .teaching-number {
-            color: #daa520;
-            font-weight: 700;
-            font-size: 28px;
-            margin-right: 15px;
+        #section3 .bg-greg {
+            position: absolute;
+            width: 600px;
+            height: auto;
+            opacity: 0.15;
+            z-index: 1;
         }
 
-        .testimonials {
-            background: #0a0a0a;
+        /* SECTION 4: TESTIMONIALS */
+        #section4 {
+            background: #111;
+            flex-direction: column;
+        }
+
+        #section4 h2 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            color: #FFD700;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
         }
 
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            gap: 2rem;
+            max-width: 1400px;
+            width: 100%;
         }
 
         .testimonial-card {
-            background: #151515;
-            border: 2px solid #222222;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
+            background: #1a1a1a;
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
 
-        .testimonial-card:hover {
-            border-color: #daa520;
-            transform: translateY(-5px);
+        .testimonial-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #FFD700;
         }
 
-        .testimonial-text {
-            font-size: 24px;
-            margin-bottom: 25px;
-            color: #daa520;
-            line-height: 1.6;
+        .testimonial-card .quote {
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            color: #FFD700;
+            line-height: 1.4;
         }
 
-        .testimonial-author {
-            font-size: 14px;
-            opacity: 0.6;
-            font-style: italic;
+        .testimonial-card .author {
+            font-size: 1rem;
+            color: #999;
+            font-family: Arial, sans-serif;
         }
 
-        .join-movement {
-            background: #0a0a0a;
-            text-align: center;
-            padding: 120px 40px;
+        /* SECTION 5: JOIN GREG */
+        #section5 {
+            background: #111;
+            flex-direction: column;
         }
 
-        .join-movement p {
-            font-size: 28px;
-            margin-bottom: 50px;
-            opacity: 0.9;
-            line-height: 1.8;
+        #section5 .greg-pulsing {
+            width: 450px;
+            max-width: 80vw;
+            height: auto;
+            border-radius: 20px;
+            animation: gregGlow 3s infinite, pulse 2s ease-in-out infinite;
         }
 
-        .greg-button {
-            background: #daa520;
-            color: #0a0a0a;
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        #section5 .big-text {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            color: #FFD700;
+            margin: 2rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        #section5 .join-button {
+            background: #FFD700;
+            color: #111;
             border: none;
-            font-size: 48px;
-            padding: 30px 80px;
-            border-radius: 12px;
+            font-size: clamp(3rem, 7vw, 6rem);
+            font-weight: 900;
+            padding: 1.5rem 4rem;
+            border-radius: 25px;
             cursor: pointer;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow:
-                0 0 40px rgba(218, 165, 32, 0.4),
-                0 10px 30px rgba(0, 0, 0, 0.5);
-            margin-bottom: 30px;
+            margin: 2rem 0;
+            text-transform: uppercase;
+            transition: transform 0.2s;
+            font-family: Impact, 'Arial Black', Arial, sans-serif;
         }
 
-        .greg-button:hover {
-            transform: scale(1.05);
-            box-shadow:
-                0 0 60px rgba(218, 165, 32, 0.6),
-                0 15px 40px rgba(0, 0, 0, 0.6);
+        #section5 .join-button:hover {
+            transform: scale(1.1);
         }
 
-        .greg-button:active {
-            transform: scale(0.98);
+        #section5 .join-button:active {
+            transform: scale(0.95);
         }
 
-        .acknowledgment {
-            font-size: 20px;
-            color: #daa520;
-            margin-top: 30px;
+        .session-counter {
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+            color: #FFD700;
+            margin-top: 1rem;
+            font-family: Arial, sans-serif;
+        }
+
+        .acknowledgment-text {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: #FFD700;
+            margin-top: 1rem;
+            min-height: 3rem;
             opacity: 0;
-            transition: opacity 0.5s ease;
-            font-style: italic;
+            transition: opacity 0.3s;
         }
 
-        .acknowledgment.visible {
+        .acknowledgment-text.visible {
             opacity: 1;
         }
 
-        .counter {
-            font-size: 18px;
-            margin-top: 20px;
-            opacity: 0.7;
-        }
-
-        .ticker-container {
+        /* MARQUEE */
+        .marquee-container {
+            width: 100%;
             overflow: hidden;
-            margin-top: 60px;
-            background: #000000;
-            padding: 30px 0;
-            border-top: 2px solid #daa520;
-            border-bottom: 2px solid #daa520;
+            background: #000;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 5px solid #FFD700;
+            border-bottom: 5px solid #FFD700;
         }
 
-        .ticker {
+        .marquee {
             display: flex;
-            animation: scroll 30s linear infinite;
+            animation: marqueeScroll 20s linear infinite;
+            width: fit-content;
+        }
+
+        .marquee span {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            color: #FFD700;
+            padding: 0 2rem;
             white-space: nowrap;
         }
 
-        .ticker span {
-            font-size: 32px;
-            padding: 0 40px;
-            color: #daa520;
-        }
-
-        @keyframes scroll {
+        @keyframes marqueeScroll {
             0% {
                 transform: translateX(0);
             }
@@ -283,214 +365,235 @@
             }
         }
 
+        /* FOOTER */
         footer {
-            background: #000000;
-            border-top: 3px solid #daa520;
-            padding: 60px 40px 40px;
+            background: #000;
+            padding: 3rem 2rem;
             text-align: center;
+            border-top: 5px solid #FFD700;
         }
 
         footer p {
-            margin-bottom: 15px;
-            font-size: 16px;
-            opacity: 0.8;
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            margin: 1rem 0;
+            color: #FFD700;
+        }
+
+        footer .emoji-row {
+            font-size: 3rem;
+            margin: 1.5rem 0;
         }
 
         footer .tiny {
-            font-size: 11px;
-            opacity: 0.5;
-            font-style: italic;
-            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #999;
+            font-family: Arial, sans-serif;
+            margin-top: 2rem;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 60px;
-                letter-spacing: 20px;
-                padding-left: 20px;
+            #section2 {
+                flex-direction: column;
             }
 
-            .hero .subtitle {
-                font-size: 20px;
+            #section2 .right-side {
+                text-align: center;
             }
 
-            .greg-image {
-                width: 280px;
-                height: 280px;
+            .fan-wall {
+                grid-template-columns: repeat(3, 80px);
             }
 
-            .section h2 {
-                font-size: 36px;
-            }
-
-            .who-is-greg {
+            .testimonial-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .who-is-greg .text-content p {
-                font-size: 18px;
-            }
-
-            .teaching-item {
-                font-size: 18px;
-                padding: 25px 30px;
-            }
-
-            .testimonial-text {
-                font-size: 20px;
-            }
-
-            .join-movement p {
-                font-size: 22px;
-            }
-
-            .greg-button {
-                font-size: 36px;
-                padding: 25px 60px;
-            }
-
-            .ticker span {
-                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="greg.jpg" alt="Greg" class="greg-image">
-        <h1>greg</h1>
-        <div class="subtitle">Greg👍 Greg👍 Greg👍 Greg👍 Greg👍</div>
-        <div class="badge">2,200 Members Strong</div>
-        <div class="small-text">He does not ask for your praise. He simply receives it.</div>
-    </section>
 
-    <!-- WHO IS GREG SECTION -->
-    <section class="section">
-        <h2>Who Is Greg</h2>
-        <div class="who-is-greg">
-            <div class="text-content">
-                <p>Greg is a frog. Greg does not explain himself. Greg simply is.</p>
-                <p>Greg has been sitting like that for a very long time. He will continue to sit like that.</p>
-                <p>Greg's hobbies include: sitting, being Greg, receiving thumbs ups.</p>
-                <p>Greg has no known enemies. Greg's enemies have no known whereabouts.</p>
-            </div>
-            <img src="greg.jpg" alt="Greg" class="greg-image-small">
+<!-- FLOATING THUMBS UP -->
+<div class="thumbs-container" id="thumbsContainer"></div>
+
+<!-- SECTION 1: THE GREG -->
+<section id="section1">
+    <h1>GREG 👍</h1>
+    <img src="greg.jpg" alt="Greg" class="greg-main">
+    <div class="greg-spam">
+        Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍
+    </div>
+    <div class="counter-badge">2,200 GREGS STRONG</div>
+</section>
+
+<!-- SECTION 2: WHO IS GREG -->
+<section id="section2">
+    <div class="left-side">
+        <img src="greg.jpg" alt="Greg">
+    </div>
+    <div class="right-side">
+        <p>Greg is a guy.</p>
+        <p>Greg sits.</p>
+        <p>Greg👍</p>
+        <p>Nobody knows where Greg came from.</p>
+        <p>Greg does not answer questions.</p>
+        <p>Greg simply is.</p>
+        <p>Greg👍 Greg👍 Greg👍</p>
+        <div class="fan-wall">
+            <img src="greg.jpg" alt="Greg">
+            <img src="greg.jpg" alt="Greg">
+            <img src="greg.jpg" alt="Greg">
+            <img src="greg.jpg" alt="Greg">
+            <img src="greg.jpg" alt="Greg">
+            <img src="greg.jpg" alt="Greg">
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- THE TEACHINGS OF GREG SECTION -->
-    <section class="teachings">
-        <h2>The Teachings of Greg</h2>
-        <div class="teachings-list">
-            <div class="teaching-item">
-                <span class="teaching-number">I.</span>
-                Thou shalt say Greg👍
-            </div>
-            <div class="teaching-item">
-                <span class="teaching-number">II.</span>
-                When in doubt, say Greg👍 again
-            </div>
-            <div class="teaching-item">
-                <span class="teaching-number">III.</span>
-                Greg does not need your validation. But he accepts it.
-            </div>
-            <div class="teaching-item">
-                <span class="teaching-number">IV.</span>
-                There is no problem that cannot be addressed with Greg👍
-            </div>
-            <div class="teaching-item">
-                <span class="teaching-number">V.</span>
-                You may ask: why Greg? Greg does not answer. Greg simply sits.
-            </div>
+<!-- SECTION 3: THE SACRED TEXTS -->
+<section id="section3">
+    <img src="greg.jpg" alt="Greg" class="bg-greg">
+    <h2>THE TEACHINGS</h2>
+    <div class="teachings">
+        <div>1. Greg👍</div>
+        <div>2. Greg👍 Greg👍</div>
+        <div>3. If unsure: Greg👍</div>
+        <div>4. Greg does not need you. But: Greg👍</div>
+        <div>5. 👍 Greg 👍 Greg 👍 Greg 👍</div>
+    </div>
+</section>
+
+<!-- SECTION 4: TESTIMONIALS -->
+<section id="section4">
+    <h2>WHAT PEOPLE ARE SAYING ABOUT GREG</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <img src="greg.jpg" alt="Greg Believer">
+            <div class="quote">Greg👍</div>
+            <div class="author">— Greg Believer #1</div>
         </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION -->
-    <section class="section testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-text">Greg👍</div>
-                <div class="testimonial-author">— Member #1</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-text">Greg👍 Greg👍</div>
-                <div class="testimonial-author">— Member #847</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-text">I was lost. Then I found Greg. Greg👍</div>
-                <div class="testimonial-author">— Member #1,203</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-text">Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍</div>
-                <div class="testimonial-author">— Member #2,199</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-text">What does Greg mean to me? Greg👍</div>
-                <div class="testimonial-author">— Member #412</div>
-            </div>
+        <div class="testimonial-card">
+            <img src="greg.jpg" alt="Greg Believer">
+            <div class="quote">Greg👍 Greg👍</div>
+            <div class="author">— Greg Believer #847</div>
         </div>
-    </section>
-
-    <!-- JOIN THE MOVEMENT SECTION -->
-    <section class="join-movement">
-        <h2 style="color: #daa520; font-size: 56px; text-transform: uppercase; letter-spacing: 6px; margin-bottom: 50px;">Join The Movement</h2>
-        <p>2,200 have already said Greg👍. Will you?</p>
-        <button class="greg-button" id="gregButton">Greg👍</button>
-        <div class="acknowledgment" id="acknowledgment">Greg has acknowledged you.</div>
-        <div class="counter" id="counter">Total Greg👍: <span id="count">2200</span></div>
-
-        <div class="ticker-container">
-            <div class="ticker">
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-                <span>Greg👍</span>
-            </div>
+        <div class="testimonial-card">
+            <img src="greg.jpg" alt="Greg Believer">
+            <div class="quote">I had nothing. Then: Greg👍</div>
+            <div class="author">— Greg Believer #1,203</div>
         </div>
-    </section>
+        <div class="testimonial-card">
+            <img src="greg.jpg" alt="Greg Believer">
+            <div class="quote">Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍</div>
+            <div class="author">— Greg Believer #2,199 (most devoted)</div>
+        </div>
+        <div class="testimonial-card">
+            <img src="greg.jpg" alt="Greg Believer">
+            <div class="quote">Greg.</div>
+            <div class="author">— Greg Believer #412 (a man of few words. A man of Greg.)</div>
+        </div>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© Greg. All rights reserved by Greg.</p>
-        <p>greg.frog — the official website of Greg</p>
-        <p class="tiny">Greg has not personally endorsed this website. But he has not NOT endorsed it either.</p>
-    </footer>
+<!-- SECTION 5: JOIN GREG -->
+<section id="section5">
+    <img src="greg.jpg" alt="Greg" class="greg-pulsing">
+    <div class="big-text">2,200 HAVE ALREADY SAID Greg👍</div>
+    <div class="big-text">IT IS YOUR TURN.</div>
+    <button class="join-button" id="gregButton">Greg👍</button>
+    <div class="session-counter">You have said Greg👍 <span id="clickCount">0</span> times this session</div>
+    <div class="acknowledgment-text" id="acknowledgment"></div>
 
-    <script>
-        let count = 2200;
-        const gregButton = document.getElementById('gregButton');
-        const acknowledgment = document.getElementById('acknowledgment');
-        const countElement = document.getElementById('count');
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+            <span>Greg👍</span>
+        </div>
+    </div>
+</section>
 
-        gregButton.addEventListener('click', function() {
-            count++;
-            countElement.textContent = count;
+<!-- FOOTER -->
+<footer>
+    <p>© Greg. All rights by Greg. For Greg.</p>
+    <div class="emoji-row">Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍 Greg👍</div>
+    <p>greg.frog</p>
+    <p class="tiny">Greg has not personally endorsed this website. Greg does not endorse. Greg simply sits.</p>
+</footer>
 
-            acknowledgment.classList.add('visible');
+<script>
+// FLOATING THUMBS UP RAIN
+const thumbsContainer = document.getElementById('thumbsContainer');
+function createFloatingThumb() {
+    const thumb = document.createElement('div');
+    thumb.className = 'floating-thumb';
+    thumb.textContent = '👍';
+    thumb.style.left = Math.random() * 100 + 'vw';
+    thumb.style.animationDuration = (Math.random() * 3 + 4) + 's';
+    thumb.style.animationDelay = Math.random() * 2 + 's';
+    thumbsContainer.appendChild(thumb);
 
-            setTimeout(() => {
-                acknowledgment.classList.remove('visible');
-            }, 3000);
-        });
-    </script>
+    setTimeout(() => {
+        thumb.remove();
+    }, 8000);
+}
+
+// Create thumbs continuously
+setInterval(createFloatingThumb, 400);
+
+// Initial batch
+for (let i = 0; i < 10; i++) {
+    setTimeout(createFloatingThumb, i * 200);
+}
+
+// GREG BUTTON
+let clickCount = 0;
+const gregButton = document.getElementById('gregButton');
+const clickCountEl = document.getElementById('clickCount');
+const acknowledgmentEl = document.getElementById('acknowledgment');
+
+const messages = [
+    "Greg has acknowledged you.",
+    "Greg nods.",
+    "Greg👍",
+    "Greg sees you.",
+    "Greg."
+];
+
+gregButton.addEventListener('click', () => {
+    clickCount++;
+    clickCountEl.textContent = clickCount;
+
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    acknowledgmentEl.textContent = randomMessage;
+    acknowledgmentEl.classList.add('visible');
+
+    setTimeout(() => {
+        acknowledgmentEl.classList.remove('visible');
+    }, 2000);
+});
+</script>
+
 </body>
 </html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official website of Greg - Visionary, Leader, Legend. Senior Procurement Associate and unsung hero of the Westbrook Corporate Park.">
+    <meta name="keywords" content="Greg, leadership, excellence, vision, procurement, hero">
+    <meta name="author" content="Greg">
+    <title>GREG - Visionary. Leader. Legend.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #f8f9fa;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+        }
+
+        .watermark {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .watermark::before {
+            content: 'GREG GREG GREG GREG GREG GREG GREG GREG GREG GREG GREG GREG GREG GREG GREG GREG';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 120px;
+            font-weight: 900;
+            color: rgba(218, 165, 32, 0.03);
+            font-family: Georgia, serif;
+            line-height: 1.2;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            transform: rotate(-45deg) translateY(-20%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f2557 0%, #1a3a6e 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+            position: relative;
+            border-bottom: 6px solid #daa520;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            font-size: 120px;
+            letter-spacing: 20px;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+            font-weight: 900;
+        }
+
+        .hero .tagline {
+            font-size: 28px;
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #daa520;
+            font-family: Georgia, serif;
+        }
+
+        .hero .subtext {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-bottom: 50px;
+        }
+
+        .portrait {
+            width: 300px;
+            height: 400px;
+            background: #404040;
+            margin: 40px auto;
+            border: 8px solid #daa520;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 18px;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-quote {
+            max-width: 800px;
+            margin: 40px auto 0;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.8;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-left: 5px solid #daa520;
+            border-radius: 4px;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .section h2 {
+            font-size: 48px;
+            color: #0f2557;
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 4px solid #daa520;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .about-content {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            border: 3px solid #daa520;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .about-content strong {
+            color: #0f2557;
+        }
+
+        .infobox {
+            float: right;
+            width: 300px;
+            background: #f8f9fa;
+            border: 2px solid #0f2557;
+            padding: 20px;
+            margin: 0 0 20px 30px;
+            font-size: 14px;
+        }
+
+        .infobox h3 {
+            color: white;
+            background: #0f2557;
+            margin: -20px -20px 15px -20px;
+            padding: 12px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .infobox p {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #daa520;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #daa520;
+            transform: translateX(-50%);
+        }
+
+        .achievement {
+            background: white;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            border: 3px solid #0f2557;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            position: relative;
+            width: calc(50% - 50px);
+        }
+
+        .achievement:nth-child(odd) {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .achievement:nth-child(even) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .achievement::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            width: 30px;
+            height: 30px;
+            background: #daa520;
+            border: 4px solid #0f2557;
+            border-radius: 50%;
+        }
+
+        .achievement:nth-child(odd)::before {
+            right: -65px;
+        }
+
+        .achievement:nth-child(even)::before {
+            left: -65px;
+        }
+
+        .achievement h3 {
+            color: #daa520;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .achievement p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .pillar {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 6px solid #daa520;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar:hover {
+            transform: translateY(-5px);
+        }
+
+        .pillar h3 {
+            color: #0f2557;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .pillar p {
+            font-size: 16px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .press-quotes {
+            margin-top: 50px;
+        }
+
+        .quote-card {
+            background: white;
+            padding: 35px;
+            margin: 25px 0;
+            border-left: 6px solid #0f2557;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-size: 18px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .quote-card .attribution {
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: 600;
+            color: #0f2557;
+            font-size: 14px;
+        }
+
+        .press-kit-btn {
+            display: inline-block;
+            background: #daa520;
+            color: #0f2557;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 30px;
+            border: 3px solid #0f2557;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .press-kit-btn:hover {
+            background: #0f2557;
+            color: #daa520;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            border: 3px solid #daa520;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .contact-form h3 {
+            color: #0f2557;
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .contact-form .subtext {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+            font-style: italic;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0f2557;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #daa520;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #0f2557;
+            color: white;
+            padding: 16px 50px;
+            border: 3px solid #daa520;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #daa520;
+            color: #0f2557;
+        }
+
+        .thank-you {
+            text-align: center;
+            padding: 60px 30px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #0f2557;
+        }
+
+        .thank-you p {
+            margin-bottom: 15px;
+        }
+
+        .thank-you .note {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        footer {
+            background: #0f2557;
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+            border-top: 6px solid #daa520;
+        }
+
+        footer p {
+            margin-bottom: 15px;
+        }
+
+        footer .small {
+            font-size: 12px;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 60px;
+                letter-spacing: 10px;
+            }
+
+            .hero .tagline {
+                font-size: 20px;
+            }
+
+            .hero-quote {
+                font-size: 16px;
+                padding: 20px;
+            }
+
+            .portrait {
+                width: 250px;
+                height: 333px;
+            }
+
+            .section h2 {
+                font-size: 32px;
+            }
+
+            .about-content {
+                padding: 30px;
+            }
+
+            .infobox {
+                float: none;
+                width: 100%;
+                margin: 0 0 30px 0;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .achievement {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+
+            .achievement::before {
+                left: -50px !important;
+                right: auto !important;
+            }
+
+            .achievement h3 {
+                font-size: 24px;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>GREG</h1>
+        <div class="tagline">Visionary. Leader. Legend.</div>
+        <div class="subtext">...of the Westbrook Corporate Park, Suite 204</div>
+
+        <div class="portrait">
+            OFFICIAL PORTRAIT<br>(Coming Soon)
+        </div>
+
+        <div class="hero-quote">
+            "Some men are born great. Some achieve greatness. Greg achieved both, plus he fixed the Keurig."
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section watermark">
+        <h2>About Greg</h2>
+        <div class="about-content">
+            <div class="infobox">
+                <h3>Gregory Alan [Redacted]</h3>
+                <p><strong>Born:</strong> 1979, Greater Akron Area</p>
+                <p><strong>Occupation:</strong> Senior Procurement Associate (Acting)</p>
+                <p><strong>Education:</strong> Business Administration (coursework completed)</p>
+                <p><strong>Known for:</strong> Employee of the Month, March 2019</p>
+                <p><strong>Special Skills:</strong> Parallel parking, commute optimization</p>
+            </div>
+
+            <p><strong>Gregory Alan [Last Name Withheld for Privacy],</strong> known professionally and personally as <strong>Greg</strong>, is an American business professional, thought leader, and Senior Procurement Associate (Acting) at a Fortune 1000-adjacent company in the greater Akron metropolitan area.</p>
+
+            <p>Born in 1979 in the greater Akron area, Greg demonstrated early signs of excellence, reportedly walking at age 1 and speaking his first word ("more") at age 2. He attended local schools where he was described as "present" and "enrolled." Greg pursued higher education in Business Administration, completing substantial coursework before determining that real-world experience would better serve his trajectory toward greatness.</p>
+
+            <p><strong>Greg's professional career</strong> has been marked by steady advancement and periodic lateral movement. After several years in various roles that helped him "learn the ropes," Greg secured his current position as Senior Procurement Associate (Acting) in 2018, a role he has held with distinction despite the "Acting" designation remaining unchanged for reasons Greg describes as "bureaucratic formality."</p>
+
+            <p>In March 2019, Greg was named <strong>Employee of the Month</strong>, an honor he accepts with humility while also noting it should have happened sooner. The award recognized his "consistent attendance" and "ability to work well independently and also in groups when required."</p>
+
+            <p><strong>Notable achievements</strong> include mastering every shortcut on his morning commute (current record: 23 minutes, 41 seconds, pending verification), developing the ability to parallel park "on the first try, most times," and being described in his self-authored performance review as "a real go-getter with untapped leadership potential."</p>
+
+            <p>Greg currently resides in a "very reasonable" two-bedroom apartment approximately 15-20 minutes from work, depending on traffic. He has been described by neighbors as "quiet" and "the guy in 4B."</p>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section class="section watermark" style="background: #f0f0f0;">
+        <h2>Greatest Achievements</h2>
+        <div class="timeline">
+            <div class="achievement">
+                <h3>2019</h3>
+                <p><strong>The Perfect Park:</strong> On a rainy Tuesday morning in November, Greg successfully parallel parked his 2008 Honda Accord on the first attempt in a space that was, by his estimation, "barely longer than the car." While no witnesses were present to document this historic moment, Greg maintains detailed mental notes and considers it "probably the best parking job of that entire year, maybe decade."</p>
+            </div>
+
+            <div class="achievement">
+                <h3>2021</h3>
+                <p><strong>The Great Printer Resurrection:</strong> When the office HP LaserJet Pro MFP M428fdw experienced a critical failure during Q3 earnings preparation, panic spread throughout Suite 204. While others suggested calling IT, Greg calmly approached the device, observed the error message, and executed a flawless power-cycle maneuver. The printer resumed operation immediately. Greg's preliminary cost-benefit analysis estimated this intervention saved the company "an estimated $40,000 in IT consultation fees and productivity losses," a figure he has refined through several subsequent recalculations.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>2022</h3>
+                <p><strong>The Weather Prophecies:</strong> Demonstrating an almost supernatural connection to meteorological patterns, Greg correctly predicted rain on three consecutive occasions before consulting any weather application or service. Colleagues who witnessed these predictions described them as "fine, I guess" and "yeah, it was pretty cloudy." Greg considers this his "most underappreciated achievement" and maintains a private journal of his weather intuitions for future publication.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>2023</h3>
+                <p><strong>The Bed Bath & Beyond Negotiation:</strong> Armed with a 20% off coupon that had expired four months prior, Greg entered the Bed Bath & Beyond on Hamilton Avenue with a mission. Through a combination of polite persistence, strategic timing (approaching during a shift change), and what he describes as "executive presence," Greg successfully negotiated a 10% discount on a $24.99 bathroom organizer. This masterclass in negotiation has been cited by Greg in zero published case studies, though he remains available for speaking engagements on the topic.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>2024</h3>
+                <p><strong>The 5K Triumph:</strong> In May 2024, Greg completed the Westbrook Corporate Wellness 5K Run/Walk in an impressive time he describes as "very competitive for someone who doesn't really train." While the official route was adjusted mid-race due to construction, resulting in a distance Greg estimates at "probably 4.2-4.7K," he notes that "a 5K is really more of a mindset than an exact measurement" and that he "absolutely would have finished the full distance if it had been available."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY SECTION -->
+    <section class="section watermark">
+        <h2>Greg's Philosophy</h2>
+        <div class="pillars">
+            <div class="pillar">
+                <h3>Excellence</h3>
+                <p>"If something is worth doing, it's worth doing. Full stop. Greg doesn't finish his own quotes because he lets YOU fill in the greatness. That's called leadership. That's called empowerment. That's called giving others the opportunity to complete what Greg has already envisioned but graciously allows you to articulate in your own words."</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Vision</h3>
+                <p>"While others see a problem, Greg sees an opportunity. While others see an opportunity, Greg has already moved on, because he saw it first. Sometimes days earlier. Sometimes weeks. Greg operates on a timeline that others simply cannot perceive, which is why his contributions are often recognized retroactively, once everyone else catches up to where Greg was three months ago."</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Resilience</h3>
+                <p>"Greg once spilled an entire coffee on his keyboard and kept working for 45 minutes before realizing it was off. The fact that he continued to type emails on a non-functioning device demonstrates an unshakeable commitment to productivity that transcends the limitations of electrical current. This is not a mistake. This is dedication. This is Greg."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESS SECTION -->
+    <section class="section watermark" style="background: #f0f0f0;">
+        <h2>Press &amp; Media</h2>
+        <p style="text-align: center; font-size: 18px; margin-bottom: 20px;">Greg is available for keynote speaking engagements, bar mitzvahs, and LinkedIn endorsements.</p>
+
+        <div class="press-quotes">
+            <div class="quote-card">
+                "He came, he saw, he submitted the expense report on time."
+                <div class="attribution">— The Westbrook Workplace Weekly</div>
+            </div>
+
+            <div class="quote-card">
+                "Greg? Oh yeah, Greg."
+                <div class="attribution">— A colleague (name withheld)</div>
+            </div>
+
+            <div class="quote-card">
+                "I've never actually met Greg but his email auto-replies are very professional."
+                <div class="attribution">— LinkedIn connection (mutual: 1)</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="#" class="press-kit-btn" id="pressKitBtn">Download Press Kit</a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section watermark">
+        <h2>Contact</h2>
+        <div class="contact-form" id="contactForm">
+            <h3>Reach Greg</h3>
+            <p class="subtext">For speaking engagements, media inquiries, fan mail, and general admiration.</p>
+
+            <form id="contactFormElement">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization" name="organization" placeholder="e.g. BBC, Forbes, local newspaper" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+        </div>
+
+        <div class="thank-you" id="thankYou" style="display: none;">
+            <p><strong>Thank you.</strong></p>
+            <p>Greg has been notified. He is currently reviewing a high volume of inquiries.</p>
+            <p class="note">(Note: you are the first.)</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Greg. All rights reserved.</p>
+        <p>GregIsGreat.com was registered by Greg personally.</p>
+        <p class="small">This website was designed by Greg. Any resemblance to professionalism is intentional.</p>
+    </footer>
+
+    <script>
+        // Contact Form Handler
+        document.getElementById('contactFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('thankYou').style.display = 'block';
+        });
+
+        // Press Kit Download
+        document.getElementById('pressKitBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const pressKitContent = `GREG PRESS KIT v1.0
+============================================
+
+Contents: This document.
+
+More content coming soon.
+
+Please hold.
+
+— Greg
+
+============================================
+For media inquiries, contact Greg directly through GregIsGreat.com
+© 2024 Greg. All rights reserved.`;
+
+            const blob = new Blob([pressKitContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Greg_Press_Kit_v1.0.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>
